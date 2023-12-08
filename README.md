@@ -1,6 +1,14 @@
 # CRUD_API
 aprendizado CRUD API
 
+### 🖥️ Tecnologias e Ferramentas 
+<p align="left">
+<img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" title="NODEjs"/>
+<img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="JavaScript"/>
+<img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" title="VScode"/>
+<img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git"/>
+</p>
+
 Em resumo, este código cria uma aplicação Express simples que fornece operações CRUD (Create, Read, Update, Delete) para um conjunto de pessoas, utilizando um array como fonte de dados. As operações são expostas através de diferentes rotas HTTP.
 
 1-Importando módulos:
