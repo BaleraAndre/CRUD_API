@@ -1,13 +1,17 @@
+//1
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+//2
 const app = express();
 const port = process.env.PORT || 8000;
 
+//3
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//4
 let pessoas = [
   { id: 1, nome: 'Alice', email: 'alice@example.com' },
   { id: 2, nome: 'Bob', email: 'bob@example.com' },
@@ -15,10 +19,12 @@ let pessoas = [
   { id: 4, nome: 'David', email: 'david@example.com' }
 ];
 
+//5
 app.get('/pessoas', (req, res) => {
   res.json(pessoas);
 });
 
+//6
 app.post('/pessoas', (req, res) => {
   const novaPessoa = req.body;
   novaPessoa.id = pessoas.length + 1;
@@ -26,6 +32,7 @@ app.post('/pessoas', (req, res) => {
   res.json({ mensagem: 'Pessoa adicionada com sucesso!', pessoa: novaPessoa });
 });
 
+//7
 app.put('/pessoas/:id', (req, res) => {
   const pessoaId = parseInt(req.params.id);
   const body = req.body;
@@ -40,6 +47,7 @@ app.put('/pessoas/:id', (req, res) => {
   }
 });
 
+//8
 app.delete('/pessoas/:id', (req, res) => {
   const pessoaId = parseInt(req.params.id);
 
@@ -53,6 +61,7 @@ app.delete('/pessoas/:id', (req, res) => {
   }
 });
 
+//9
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
